@@ -8,11 +8,11 @@ import random
 
 SAMPLE_RATE = 44100 # in samples per second
 FREQ = 400.0 # frequency in HZ
-TIME = 8 # in seconds
+TIME = 10 # in seconds
 STEPS = 1000 # decay steps
 DECAY_RATE = 0.999 # decay per step
 AMPLITUDE = 2 ** 15 - 1.0 # maximum amplitude
-DECAY_DIR = 'Right' # which channel to decay
+DECAY_DIR = 'Left' # which channel to decay
 
 length = SAMPLE_RATE * TIME
 step_lenght = length // STEPS
