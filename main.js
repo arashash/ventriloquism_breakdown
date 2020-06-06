@@ -1,3 +1,15 @@
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://arash:4c3r81ty@cluster0-0uzur.mongodb.net/baseline?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("baseline").collection("test");
+  // perform actions on the collection object
+  client.close();
+});
+
+
+
+
 var timer = document.getElementById('timer');
 var toggleBtn = document.getElementById('toggle');
 var resetBtn = document.getElementById('reset');
