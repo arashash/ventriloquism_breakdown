@@ -10,10 +10,10 @@ var timer = 0
 function start(num){
   if ((Math.random() > 0.5)) {
     state = 'RIGHT'
-    beeeep.src = 'Right_decay.mp3';
+    beeeep.src = 'Right_decay.wav';
   } else {
     state = 'LEFT'
-    beeeep.src = 'Left_decay.mp3';
+    beeeep.src = 'Left_decay.wav';
   }
   watch.reset();
   beeeep.play();

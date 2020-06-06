@@ -12,7 +12,7 @@ TIME = 10 # in seconds
 STEPS = 1000 # decay steps
 DECAY_RATE = 0.995 # decay per step
 AMPLITUDE = 2 ** 15 - 1.0 # maximum amplitude
-DECAY_DIR = 'Right' # which channel to decay
+DECAY_DIR = 'Left' # which channel to decay
 
 length = SAMPLE_RATE * TIME
 step_lenght = length // STEPS
