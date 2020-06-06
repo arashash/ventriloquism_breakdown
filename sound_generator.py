@@ -18,12 +18,12 @@ length = SAMPLE_RATE * TIME
 step_lenght = length // STEPS
 leftMaxVol = rightMaxVol = AMPLITUDE
 
-wv = wave.open('%s_decay.mp3'%DECAY_DIR, 'w')
+wv = wave.open('%s_decay.wav'%DECAY_DIR, 'w')
 wv.setparams((2, 2, SAMPLE_RATE, 0, 'NONE', 'not compressed'))
 wvData = b''
 for i in range(length):
-    wvData += pack('h', int(rightMaxVol * sin(i * FREQ / SAMPLE_RATE))) # right
     wvData += pack('h', int(leftMaxVol * sin(i * FREQ / SAMPLE_RATE))) # left
+    wvData += pack('h', int(rightMaxVol * sin(i * FREQ / SAMPLE_RATE))) # right
     if i % step_lenght == 0:
         if DECAY_DIR == 'Left':
             leftMaxVol *= DECAY_RATE
